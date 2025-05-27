@@ -191,7 +191,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </a>
                   
                   <a 
-                    href="www.linkedin.com/in/zineb-dkier-20654528a"
+                    href="https://www.linkedin.com/in/zineb-dkier-20654528a/
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-700 hover:bg-primary-100 hover:text-primary-600 transition-colors duration-300"
