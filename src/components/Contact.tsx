@@ -16,13 +16,24 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // I sould send the form data to a server
-    console.log('Form submitted:', formData);
-    alert('Thanks for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const response = await fetch('https://formspree.io/f/xblondeo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    if (response.ok) {
+      alert("Thanks for your message! I’ll get back to you soon.");
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    alert("Failed to send message. Check your connection.");
+  }
+};
 
   const [footerHeight, setFooterHeight] = useState(0);
 
@@ -142,7 +153,7 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-medium text-left text-gray-800">Email</h4>
                       <a 
-                        href="mailto:hello@janedoe.com"
+                        href="mailto:zineb.dkier@gmail.com"
                         className="text-gray-600 hover:text-primary-600 transition-colors"
                       >
                         zineb.dkier@gmail.com
