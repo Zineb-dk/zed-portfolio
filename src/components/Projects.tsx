@@ -46,7 +46,7 @@ const projects: Project[] = [
   id: 4,
   title: "Spring Boot User Management API",
   description: "Built a robust RESTful API with Spring Boot to manage user data, including CRUD operations, validation, and secure routing. Designed for scalable integration with frontend apps or external services.",
-  image: "/images/springboot.png",
+  image: "images/springboot.png",
   tags: ["Java", "Spring Boot", "REST API","Mongodb","CRUD"],
   githubUrl: "",
   docsUrl: "",
