@@ -1,0 +1,28 @@
+.floating-clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+  background: transparent;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  animation: moveCloud calc(20s * var(--i)) linear infinite;
+  opacity: 1;
+}
+
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-100%) ;
+  }
+  100% {
+    transform: translateX(200%) ;
+  }
+}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'Cofigra';
+  src: url('/fonts/Cofigra.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lagu Sans';
+  src: url('/fonts/Lagu Sans Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
